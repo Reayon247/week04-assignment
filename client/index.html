@@ -11,6 +11,30 @@
   <body>
     <header>
       <h1>Nala Messaging App</h1>
+      <h2>Leave A Message for Nala(and pet her too)</h2>
     </header>
+    <main>
+      <section class="imgSection">
+        <h2>pet count:</h2>
+        <img
+          src="./src/Nala-ear-side.jpg"
+          alt="A photo of Nala"
+          class="nala-image"
+        />
+      </section>
+      <section class="formSection">
+        <form id="messageform">
+          <fieldset class="formField">
+            <legend>Your Message to Nala</legend>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" required />
+            <label for="message">Write your message:</label>
+            <input type="text" name="message" required />
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="user-messages" class="messagesSection"></section>
+    </main>
   </body>
 </html>
