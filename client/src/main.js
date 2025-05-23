@@ -9,7 +9,7 @@ function handleSubmit(event) {
   const formData = new FormData(messageForm);
   const formValues = Object.fromEntries(formData);
 
-  fetch("http://localhost:8080/newMessage", {
+  fetch("https://week04-assignment-w92u.onrender.com/newMessage", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,9 @@ messageForm.addEventListener("submit", handleSubmit);
 //Retreive data and display it in the chat box
 
 async function getMessage() {
-  const response = await fetch("http://localhost:8080/message");
+  const response = await fetch(
+    "https://week04-assignment-w92u.onrender.com/message"
+  );
   const nalaMessages = await response.json();
   // console.log(nalaMessages);
   return nalaMessages;
