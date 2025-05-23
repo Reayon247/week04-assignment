@@ -49,7 +49,7 @@ function createMessageElements(messageArray) {
     messageMessage.textContent = item.message;
     messageLikes.textContent = item.likes;
     messageLikes.className = "likes";
-    messageLikeButton.src = "./src/heart.png";
+    messageLikeButton.src = "./public/heart.png";
     messageLikeButton.alt = "A heart shaped like button";
     messageLikeButton.className = "heartButton";
 
@@ -60,7 +60,7 @@ function createMessageElements(messageArray) {
 
     messageLikeButton.addEventListener("click", () => {
       item.likes += 1;
-      messageLikeButton.src = "./src/heart-liked.png";
+      messageLikeButton.src = "./public/heart-liked.png";
       messageLikes.textContent = item.likes;
       //Attempted to update likes but I dont think I fully understand the update function or how to go about it
       // fetch("http://localhost:8080/updateLike", {
