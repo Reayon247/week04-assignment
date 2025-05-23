@@ -17,6 +17,7 @@ function handleSubmit(event) {
     body: JSON.stringify(formValues),
   });
   console.log(formValues);
+  location.replace(location.href);
 }
 
 messageForm.addEventListener("submit", handleSubmit);

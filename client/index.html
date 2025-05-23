@@ -11,11 +11,10 @@
   <body>
     <header>
       <h1>Nala Messaging App</h1>
-      <h2>Leave A Message for Nala(and pet her too)</h2>
+      <h2>Leave A Message for Nala</h2>
     </header>
     <main>
       <section class="imgSection">
-        <h2>pet count:</h2>
         <img
           src="./src/Nala-ear-side.jpg"
           alt="A photo of Nala"
@@ -27,10 +26,16 @@
           <fieldset class="formField">
             <legend>Your Message to Nala</legend>
             <label for="name">Your Name:</label>
-            <input type="text" name="name" required />
+            <input type="text" name="name" required maxlength="30" />
             <label for="message">Write your message:</label>
-            <input type="text" name="message" required />
-            <button type="submit">Send</button>
+            <input
+              type="text"
+              name="message"
+              required
+              id="message-input"
+              maxlength="150"
+            />
+            <button type="submit" class="submit">Send</button>
           </fieldset>
         </form>
       </section>
