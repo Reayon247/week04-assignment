@@ -40,16 +40,35 @@ function createMessageElements(messageArray) {
     const messageName = document.createElement("h3");
     const messageMessage = document.createElement("p");
     const messageLikes = document.createElement("p");
-    //get a like image aswell, heart?
+    const messageLikeButton = document.createElement("img");
     //make a delete button (Extra)
 
     messageName.textContent = item.name;
     messageMessage.textContent = item.message;
     messageLikes.textContent = item.likes;
+    messageLikes.className = "likes";
+    messageLikeButton.src = "./src/heart.png";
+    messageLikeButton.alt = "A heart shaped like button";
+    messageLikeButton.className = "heartButton";
 
     messageBox.appendChild(messageName);
     messageBox.appendChild(messageMessage);
     messageBox.appendChild(messageLikes);
+    messageBox.appendChild(messageLikeButton);
+
+    messageLikeButton.addEventListener("click", () => {
+      item.likes += 1;
+      messageLikeButton.src = "./src/heart-liked.png";
+      messageLikes.textContent = item.likes;
+      //Attempted to update likes but I dont think I fully understand the update function or how to go about it
+      // fetch("http://localhost:8080/updateLike", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(item.likes),
+      // });
+    });
   });
 }
 

@@ -32,6 +32,15 @@ app.post("/newMessage", (request, response) => {
   response.json(query);
 });
 
+//update likes
+// app.post("/updateLike", (request, response) => {
+//   const body = request.body;
+//   const query = db.query(`UPDATE nalamessages SET likes VALUES($1)`, [
+//     body.likes,
+//   ]);
+//   response.json(query);
+// });
+
 //read data from the message database
 app.get("/message", async (request, response) => {
   const query = await db.query("SELECT * FROM nalamessages");
